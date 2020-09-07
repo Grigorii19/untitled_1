@@ -10,30 +10,29 @@ import java.util.Scanner;
 
 public class Task_7 {
     public static void main(String[] args) {
-        System.out.println("Введите код города Москва(905); Ростов(194); Краснодар(491); Киров(800): ");
+        System.out.println("Введите код города\nМосква(905);\nРостов(194);\nКраснодар(491);\nКиров(800): ");
         Scanner scanner = new Scanner(System.in);
+
         int num = scanner.nextInt();
-        float res;
-        float msk = 4.15f, rnd = 1.98f, kras = 2.69f, kir = 5f;
+        double res, city, msk = 4.15f, rnd = 1.98f, kras = 2.69f, kir = 5f;
+        int min = 10;
         switch (num) {
             case 905:
-                res = (msk*10);
-                System.out.println("Москва. Стоимость разговора: " + res);
+                city = msk;
                 break;
             case 194:
-                res = (rnd*10);
-                System.out.println("Ростов. Стоимость разговора: " + res);
+                city = rnd;
                 break;
             case 491:
-                res = (kras*10);
-                double scale = Math.pow(10, 2);
-                double result = Math.ceil(res * scale) / scale;  // Округлил до сотых. Не совсем понял оптимальное ли это решение.
-                System.out.println("Краснодар. Стоимость разговора: " + result);
+                city = kras;
                 break;
             case 800:
-                res = (kir*10);
-                System.out.println("Киров. Стоимость разговора: " + res);
+                city = kir;
                 break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + num);
         }
+        res = city * min;
+        System.out.printf("Цена за " + min + " минут: " + "%.2f%n", res);
     }
 }
