@@ -14,22 +14,24 @@ public class Task_6 {
         Scanner scanner = new Scanner(System.in);
 
         int num = scanner.nextInt();
-        String print1, print2, result;
-
-        if (num > 0) {
-            print1 = "Положительное";
-        } else if (num < 0) {
-            print1 = "Отрицательное";
-        } else {
-            print1 = "Нулевое число";
-        }
-        if (num % 2 == 0) {
-            print2 = "четное число";
-        } else {
-            print2 = "нечетное число";
-        }
-
-        result = print1 + " " + print2;
-        System.out.println(result);
+        String print1 = null, print2, result;
+            if (num > 0) {
+                print1 = "Положительное";
+            }
+            else if (num < 0) {
+                print1 = "Отрицательное";
+            }
+            if (num == 0) {
+                System.out.println("Нулевое число");
+                return;
+            }
+            if (num % 2 == 0) {
+                print2 = "четное число";
+            }
+            else {
+                print2 = "нечетное число";
+            }
+            result = print1 + " " + print2;
+            System.out.println(result);
     }
 }

@@ -14,25 +14,25 @@ public class Task_7 {
         Scanner scanner = new Scanner(System.in);
 
         int num = scanner.nextInt();
-        double res, city, msk = 4.15f, rnd = 1.98f, kras = 2.69f, kir = 5f;
+        double resultCost, Cash, costMoskow = 4.15f, costRostov = 1.98f, costKrasnodar = 2.69f, costKirov = 5f;
         int min = 10;
         switch (num) {
             case 905:
-                city = msk;
+                Cash = costMoskow;
                 break;
             case 194:
-                city = rnd;
+                Cash = costRostov;
                 break;
             case 491:
-                city = kras;
+                Cash = costKrasnodar;
                 break;
             case 800:
-                city = kir;
+                Cash = costKirov;
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + num);
         }
-        res = city * min;
-        System.out.printf("Цена за " + min + " минут: " + "%.2f%n", res);
+        resultCost = Cash * min;
+        System.out.printf("Цена за " + min + " минут: " + "%.2f%n", resultCost);
     }
 }
