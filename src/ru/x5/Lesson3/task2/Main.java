@@ -13,10 +13,7 @@ public class Main {
         Horse horse = new Horse("Сено", "Загон");
         horse.sHorse("Лошадь", "Стрела", 9);
 
-        Animal[] arr = new Animal[3];
-        arr[0] = cat;
-        arr[1] = dog;
-        arr[2] = horse;
+        Animal[] arr = {cat, dog, horse};
 
         for (Animal animal : arr) {
 
