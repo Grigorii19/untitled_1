@@ -1,4 +1,4 @@
-package ru.x5.Lesson3;
+package ru.x5.Lesson3.task1;
 
 class Main {
 
