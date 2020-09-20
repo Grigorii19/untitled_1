@@ -4,15 +4,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Cat cat = new Cat("Каша", "Дома");
-        cat.sCat("Кот", "Пушок", 8);
+        Cat cat = new Cat("Каша", "Дома", "Кот", "Пушок", 10);
+        Dog dog = new Dog("Кости", "Будтка", "Собака", "Шарик", 12);
+        Horse horse = new Horse("Сено", "Загон", "Лошадь", "Стрела", 15);
 
-        Dog dog = new Dog("Кости", "Вольер");
-        dog.sDog("Собака", "Шарик", 10);
+        System.out.println("Метод makeNoise: ");
+        cat.makeNoise(cat.animal);
+        dog.makeNoise(dog.animal);
+        horse.makeNoise(horse.animal);
 
-        Horse horse = new Horse("Сено", "Загон");
-        horse.sHorse("Лошадь", "Стрела", 9);
-
+        System.out.println("\nFood и location пришедших животных на прием к ветеринару: ");
         Animal[] arr = {cat, dog, horse};
 
         for (Animal animal : arr) {
@@ -20,7 +21,5 @@ public class Main {
             Veterinarian veterinarian = new Veterinarian();
             veterinarian.treatAnimal(animal);
         }
-
-        System.out.println(arr[0]);
     }
 }

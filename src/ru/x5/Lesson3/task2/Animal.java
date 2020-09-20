@@ -2,7 +2,8 @@ package ru.x5.Lesson3.task2;
 
 public class Animal {
 
-    protected String food, location;
+    protected String food;
+    String location;
 
     public Animal(String food, String location) {
 
