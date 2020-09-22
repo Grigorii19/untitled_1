@@ -1,9 +1,9 @@
 package ru.x5.Lesson3.task3;
 
 public class Student {
-
-    protected String firstName, lastName, group;
-    protected Double averageMark;
+    protected String firstName;
+    private String lastName, group;
+    protected double averageMark;
 
     public Student(String firstName, String lastName, String group, double averageMark) {
 
@@ -13,12 +13,22 @@ public class Student {
         this.averageMark = averageMark;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public double getAverageMark() {
+        return averageMark;
+    }
+
     public void getScholarship() {
 
         if (averageMark == 5) {
+
             System.out.println(firstName + " стипендия = " + 100);
-        }
-        else {
+
+        } else {
+
             System.out.println(firstName + " стипендия = " + 80);
         }
     }
