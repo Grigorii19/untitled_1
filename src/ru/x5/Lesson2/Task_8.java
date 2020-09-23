@@ -6,13 +6,13 @@
  - количество положительных элементов
  - среднее арифметическое отрицательных элементов
  */
-package ru.x5;
+package ru.x5.Lesson2;
 
 import java.util.Arrays;
 
 public class Task_8 {
-    public  static void main (String[] args) {
-        int []mass = {1,-10,5,6,45,23,-45,-34,0,32,56,-1,2,-2};
+    public static void main(String[] args) {
+        int[] mass = {1, -10, 5, 6, 45, 23, -45, -34, 0, 32, 56, -1, 2, -2};
         int sum = 0;
         int max = 0;
         int num = 0;
@@ -27,10 +27,10 @@ public class Task_8 {
             if (mass[i] > max) {
                 max = mass[i];
             }
-            if ((mass[i] < 0) && (mass[i] % 2 ==0)) {
+            if ((mass[i] < 0) && (mass[i] % 2 == 0)) {
                 num = num + mass[i];
             }
-            if(mass[i] > 0) {
+            if (mass[i] > 0) {
                 kol += 1;
             }
         }
